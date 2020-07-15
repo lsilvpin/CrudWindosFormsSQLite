@@ -1,8 +1,10 @@
 ﻿using System;
-using LearningWindowsForms.services;
 
 namespace LearningWindowsForms.repository
 {
+  /// <summary>
+  /// Esta classe se preocupa com a segurança da informação
+  /// </summary>
   class Security
   {
     /// <summary>
@@ -21,7 +23,7 @@ namespace LearningWindowsForms.repository
       }
       catch (Exception ex)
       {
-        Utility.Log(ex.Message);
+        Log(ex.Message);
         return string.Empty;
       }
     }

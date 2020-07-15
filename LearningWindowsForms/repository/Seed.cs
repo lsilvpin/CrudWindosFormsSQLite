@@ -2,8 +2,6 @@
 using LearningWindowsForms.services;
 using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
 using System.Data.SQLite;
 using System.IO;
 using System.Text;
@@ -11,18 +9,23 @@ using System.Windows.Forms;
 
 namespace LearningWindowsForms.repository
 {
+  /// <summary>
+  /// Esta classe é o ambiente dedicado a se comunicar com o banco de dados
+  /// </summary>
   static class Seed
   {
-    private static readonly string _ConnectionString = @"Data Source=learningwindowsforms.db";
-    private static readonly string _DataBaseName = @"learningwindowsforms.db";
+    // Informações básicas, necessários no processo de acessar o banco de dados
+    private static readonly string _DataBasePath = Utility.MapPath(@"~\LearningWindowsForms\LearningWindowsForms\bin\Debug\learningwindowsforms.db");
+    private static readonly string _ConnectionString = String.Concat("Data Source=", _DataBasePath);
+
     /// <summary>
     /// Cria o banco de dados, caso ainda não exista
     /// </summary>
     public static void CreateSqliteDataBase()
     {
-      if (!File.Exists(_DataBaseName))
+      if (!File.Exists(_DataBasePath))
       {
-        SQLiteConnection.CreateFile(_DataBaseName); // Cria o arquivo
+        SQLiteConnection.CreateFile(_DataBasePath); // Cria o arquivo
         SQLiteConnection connection = new SQLiteConnection(_ConnectionString);
         StringBuilder sqlQuery = new StringBuilder();
         sqlQuery.AppendLine("CREATE TABLE IF NOT EXISTS Character ([Id] INTEGER PRIMARY KEY AUTOINCREMENT,");
@@ -40,17 +43,55 @@ namespace LearningWindowsForms.repository
         }
       }
     }
+
+    // O crud é o que manipula o banco de dados
+    #region CRUD
     /// <summary>
-    /// Procura no banco de dados registros contendo uma dada string em qualquer de seus dados
+    /// Cria um registro no banco de dados
     /// </summary>
-    /// <param name="search">String a ser procurada</param>
-    /// <returns></returns>
-    public static List<Character> Search(string search)
+    /// <param name="character">Insere este personagem no banco</param>
+    public static void Create(Character character)
+    {
+      // Instancio uma conexão
+      SQLiteConnection connection = new SQLiteConnection();
+      // Crio a string de consulta
+      StringBuilder sqlQuery = new StringBuilder();
+      sqlQuery.Append(String.Concat("INSERT INTO Character (Name, Race, Role) VALUES ('",
+        character.Name, "', '", character.Race, "', '", character.Role, "')"));
+      // Prepara o ambiente para fazer a consulta
+      try
+      {
+        // Abre a conexão
+        connection.Open();
+        // Instancia o comando
+        SQLiteCommand command = new SQLiteCommand(sqlQuery.ToString(), connection);
+        // Executa o comando
+        command.ExecuteNonQuery();
+      }
+      catch (Exception ex)
+      {
+        Utility.Log(ex.Message);
+      }
+    }
+    /// <summary>
+    /// Procuramos registros no banco que batam com um Id, ou com uma string de busca
+    /// </summary>
+    /// <param name="id">id procurado</param>
+    /// <param name="search">string de busca</param>
+    /// <returns>Retorna uma lista com os personagens encontrados (seus id's embutidos)</returns>
+    public static List<Character> Read(string search = "", int id = 0)
     {
       SQLiteConnection connection = new SQLiteConnection(_ConnectionString);
       StringBuilder sqlQuery = new StringBuilder();
-      sqlQuery.AppendLine(String.Concat("SELECT * FROM Character WHERE [Name] LIKE '%",search,
-        "%' OR [Race] LIKE '%",search,"%' OR [Role] LIKE '%",search,"%';"));
+      if (id != 0)
+      { // Se id != 0, estamos procurando por um ID, então a string de consulta é a seguinte
+        sqlQuery.AppendLine(String.Concat("SELECT * FROM Character WHERE [Id] = '", id, "';"));
+      }
+      else
+      { // Caso id == 0, estamos filtrando o banco por uma string, então a string de consulta é a seguinte
+        sqlQuery.AppendLine(String.Concat("SELECT * FROM Character WHERE [Name] LIKE '%", search,
+          "%' OR [Race] LIKE '%", search, "%' OR [Role] LIKE '%", search, "%';"));
+      }
       // Tenta extrair resultado da consulta do banco
       try
       {
@@ -58,7 +99,7 @@ namespace LearningWindowsForms.repository
         SQLiteCommand command = new SQLiteCommand(sqlQuery.ToString(), connection);
         SQLiteDataReader dr = command.ExecuteReader(); // Executa a leitura, e extrai resultados
         List<Character> characters = new List<Character>();
-        while (dr.Read())
+        while (dr.Read()) // Se retornou algum
         {
           characters.Add(new Character
           {
@@ -80,25 +121,32 @@ namespace LearningWindowsForms.repository
     /// <summary>
     /// Atualisa um registro no banco de dados
     /// </summary>
-    /// <param name="id">id do registro a ser atualisado</param>
     /// <param name="character">objeto Character com informações a serem submetidas no banco</param>
     public static void Update(int id, Character character)
     {
+      // Primeiro encontramos as informações faltantes e às resgatamos para não perdê-las
+      if (character.Name == null)
+      {
+        character.Name = Read("", id)[0].Name;
+      }
+      if (character.Race == null)
+      {
+        character.Race = Read("", id)[0].Race;
+      }
+      if (character.Role == null)
+      {
+        character.Role = Read("", id)[0].Role;
+      }
       SQLiteConnection connection = new SQLiteConnection(_ConnectionString);
       StringBuilder sqlQuery = new StringBuilder();
-      sqlQuery.AppendLine("update Character set Name = @Name, Race = @Race, Role = @Role where Id = @Id");
+      sqlQuery.AppendLine(String.Concat("UPDATE Character SET [Name] = '", character.Name,
+        "', [Race] = '", character.Race, "', [Role] = '", character.Role, "' WHERE [Id] = '", character.Id, "';"));
       // Tenta extrair resultado da consulta do banco
       try
       {
         connection.Open();
         SQLiteCommand command = new SQLiteCommand(sqlQuery.ToString(), connection);
-        // As linhas abaixo fazem a interpolação na string strSql
-        command.Parameters.Add("Name", DbType.String).Value = character.Name;
-        command.Parameters.Add("Race", DbType.String).Value = character.Race;
-        command.Parameters.Add("Role", DbType.String).Value = character.Role;
-        command.Parameters.Add("Id", DbType.String).Value = id;
-        SQLiteDataReader SqliteDataReader = command.ExecuteReader(); // Executa a leitura, e extrai resultados
-        command.ExecuteNonQuery();
+        command.ExecuteNonQuery(); // Executa o comando SQL no banco
       }
       catch (Exception ex)
       {
@@ -106,34 +154,41 @@ namespace LearningWindowsForms.repository
         MessageBox.Show(ex.Message);
       }
     }
-
-
-
-    //private void Get()
-    //{
-    //  DataTable dt = new DataTable();
-    //  SQLiteConnection conn = null;
-    //  String sql = "select * from Character";
-    //  String strConn = @"Data Source=C:\Users\lsilvpin\source\repos\LearningWindowsForms\LearningWindowsForms\data\learningwindowsforms.db";
-    //  try
-    //  {
-    //    conn = new SQLiteConnection(strConn);
-    //    SQLiteDataAdapter da = new SQLiteDataAdapter(sql, strConn);
-    //    da.Fill(dt);
-    //    DataView defaultView = dt.DefaultView;
-    //    Index = defaultView;
-    //  }
-    //  catch (Exception ex)
-    //  {
-    //    MessageBox.Show("Erro :" + ex.Message);
-    //  }
-    //  finally
-    //  {
-    //    if (conn.State == ConnectionState.Open)
-    //    {
-    //      conn.Close();
-    //    }
-    //  }
-    //}
+    /// <summary>
+    /// Apaga um ou mais registros do banco de dados
+    /// </summary>
+    /// <param name="character">Entidade associada ao registro que será apagado</param>
+    /// <param name="id">Id do registro que será apagado</param>
+    public static void Delete(Character character, int id = 0)
+    {
+      // Instancia a conexão
+      SQLiteConnection connection = new SQLiteConnection();
+      // Cria a string de comando SQL baseada na entrada
+      StringBuilder sqlQuery = new StringBuilder();
+      if (id != 0)
+      {
+        sqlQuery.Append(String.Concat("DELETE FROM Character WHERE [Id] = '", id, "';"));
+      }
+      else
+      {
+        sqlQuery.Append(String.Concat("DELETE FROM Character WHERE [Name] = '", character.Name,
+          "' AND [Race] = '", character.Race, "' AND [Role] = '", character.Role, "';"));
+      }
+      // Prepara o ambiente para acessar o banco e executar o comando
+      try
+      {
+        // Abre a conexão
+        connection.Open();
+        // Instancia o comando
+        SQLiteCommand command = new SQLiteCommand(sqlQuery.ToString(), connection);
+        // Executa o comando
+        command.ExecuteNonQuery();
+      }
+      catch (Exception ex)
+      {
+        Utility.Log(ex.Message);
+      }
+    }
+    #endregion
   }
 }

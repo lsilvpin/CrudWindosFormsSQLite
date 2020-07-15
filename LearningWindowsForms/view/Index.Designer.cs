@@ -54,7 +54,7 @@
             this.IconSearch});
       this.toolStrip1.Location = new System.Drawing.Point(0, 0);
       this.toolStrip1.Name = "toolStrip1";
-      this.toolStrip1.Size = new System.Drawing.Size(800, 31);
+      this.toolStrip1.Size = new System.Drawing.Size(800, 30);
       this.toolStrip1.TabIndex = 0;
       this.toolStrip1.Text = "toolStrip1";
       // 
@@ -64,8 +64,9 @@
       this.BtnCreate.Image = ((System.Drawing.Image)(resources.GetObject("BtnCreate.Image")));
       this.BtnCreate.ImageTransparentColor = System.Drawing.Color.Magenta;
       this.BtnCreate.Name = "BtnCreate";
-      this.BtnCreate.Size = new System.Drawing.Size(29, 28);
+      this.BtnCreate.Size = new System.Drawing.Size(29, 27);
       this.BtnCreate.Text = "Criar novo personagem";
+      this.BtnCreate.Click += new System.EventHandler(this.AddButtonClicked);
       // 
       // BtnUpdate
       // 

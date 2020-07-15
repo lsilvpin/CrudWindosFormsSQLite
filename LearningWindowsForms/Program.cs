@@ -1,22 +1,21 @@
-﻿using LearningWindowsForms.repository;
-using LearningWindowsForms.view;
+﻿using LearningWindowsForms.services;
 using System;
-using System.Windows.Forms;
 
 namespace LearningWindowsForms
 {
+  /// <summary>
+  /// Uma aplicação simples, para estudar o conceito de CRUD com WindowsForms
+  /// </summary>
   static class Program
   {
     /// <summary>
-    /// The main entry point for the application.
+    /// O ponto de entrada do aplicativo
     /// </summary>
     [STAThread]
     static void Main()
     {
-      Application.EnableVisualStyles();
-      Application.SetCompatibleTextRenderingDefault(false);
-      Seed.CreateSqliteDataBase();
-      Seed.Search("k");
+      Utility.Log("Programa iniciou --------------------------------------------------");
+      Utility.ValidateAndLog(Utility.PrepareEnvironmentForWindowsForms(), "PrepareEnvironmentForWindowsForms");
     }
   }
 }
