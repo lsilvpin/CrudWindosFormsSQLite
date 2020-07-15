@@ -1,0 +1,28 @@
+﻿14/07/2020 20:22:15: Erro de rede ou específico à instância ao estabelecer conexão com o SQL Server. O servidor não foi encontrado ou não estava acessível. Verifique se o nome da instância está correto e se o SQL Server está configurado para permitir conexões remotas. (provider: SQL Network Interfaces, error: 26 - Erro ao Localizar Servidor/Instância Especificada)
+14/07/2020 20:48:38: unable to open database file
+14/07/2020 20:49:27: unable to open database file
+14/07/2020 20:53:23: Invalid ConnectionString format for part "C:\Users\lsilvpin\source\repos\LearningWindowsForms\LearningWindowsForms\data\learningwindowsforms.db", no equal sign found
+14/07/2020 20:54:47: unable to open database file
+14/07/2020 20:57:16: Invalid ConnectionString format, cannot parse: string value to split cannot be null
+14/07/2020 21:33:27: unable to open database file
+14/07/2020 21:34:02: unable to open database file
+14/07/2020 22:38:53: SQL logic error
+no such column: Race
+14/07/2020 22:41:02: SQL logic error
+no such column: Race
+14/07/2020 22:42:39: SQL logic error
+row value misused
+14/07/2020 22:44:00: SQL logic error
+row value misused
+14/07/2020 22:47:01: SQL logic error
+row value misused
+14/07/2020 22:47:48: SQL logic error
+row value misused
+14/07/2020 22:48:58: SQL logic error
+row value misused
+14/07/2020 22:49:53: SQL logic error
+row value misused
+14/07/2020 22:50:34: SQL logic error
+row value misused
+14/07/2020 22:51:17: SQL logic error
+row value misused
