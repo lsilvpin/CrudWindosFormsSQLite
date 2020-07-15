@@ -16,7 +16,7 @@ namespace LearningWindowsForms
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
       Seed.CreateSqliteDataBase();
-      Seed.Read("k");
+      Seed.Search("k");
     }
   }
 }

@@ -45,32 +45,36 @@ namespace LearningWindowsForms.repository
     /// </summary>
     /// <param name="search">String a ser procurada</param>
     /// <returns></returns>
-    public static bool Read(string search)
+    public static List<Character> Search(string search)
     {
       SQLiteConnection connection = new SQLiteConnection(_ConnectionString);
       StringBuilder sqlQuery = new StringBuilder();
-      sqlQuery.AppendLine(String.Concat("SELECT (Name, Race, Role) FROM Character WHERE Name = '%",
-        search, "%'"));
+      sqlQuery.AppendLine(String.Concat("SELECT * FROM Character WHERE [Name] LIKE '%",search,
+        "%' OR [Race] LIKE '%",search,"%' OR [Role] LIKE '%",search,"%';"));
       // Tenta extrair resultado da consulta do banco
       try
       {
         connection.Open();
         SQLiteCommand command = new SQLiteCommand(sqlQuery.ToString(), connection);
-        SQLiteDataReader SqliteDataReader = command.ExecuteReader(); // Executa a leitura, e extrai resultados
-        if (SqliteDataReader.HasRows)
+        SQLiteDataReader dr = command.ExecuteReader(); // Executa a leitura, e extrai resultados
+        List<Character> characters = new List<Character>();
+        while (dr.Read())
         {
-          return true;
+          characters.Add(new Character
+          {
+            Id = Convert.ToInt32(dr["Id"]),
+            Name = Convert.ToString(dr["Name"]),
+            Race = Convert.ToString(dr["Race"]),
+            Role = Convert.ToString(dr["Role"])
+          });
         }
-        else
-        {
-          return false;
-        }
+        return characters;
       }
       catch (Exception ex)
       {
         Utility.Log(ex.Message);
         MessageBox.Show(ex.Message);
-        return false;
+        throw ex;
       }
     }
     /// <summary>
@@ -80,7 +84,6 @@ namespace LearningWindowsForms.repository
     /// <param name="character">objeto Character com informações a serem submetidas no banco</param>
     public static void Update(int id, Character character)
     {
-      SQLiteConnection.CreateFile(_DataBaseName); // Cria o arquivo
       SQLiteConnection connection = new SQLiteConnection(_ConnectionString);
       StringBuilder sqlQuery = new StringBuilder();
       sqlQuery.AppendLine("update Character set Name = @Name, Race = @Race, Role = @Role where Id = @Id");

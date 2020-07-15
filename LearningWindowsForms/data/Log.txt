@@ -26,3 +26,5 @@ row value misused
 row value misused
 14/07/2020 22:51:17: SQL logic error
 row value misused
+14/07/2020 23:39:31: DataReader already active on this command
+14/07/2020 23:40:37: DataReader already active on this command
