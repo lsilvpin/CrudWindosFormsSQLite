@@ -53,7 +53,7 @@ namespace LearningWindowsForms.repository
     public static void Create(Character character)
     {
       // Instancio uma conexão
-      SQLiteConnection connection = new SQLiteConnection();
+      SQLiteConnection connection = new SQLiteConnection(_ConnectionString);
       // Crio a string de consulta
       StringBuilder sqlQuery = new StringBuilder();
       sqlQuery.Append(String.Concat("INSERT INTO Character (Name, Race, Role) VALUES ('",
@@ -140,7 +140,7 @@ namespace LearningWindowsForms.repository
       SQLiteConnection connection = new SQLiteConnection(_ConnectionString);
       StringBuilder sqlQuery = new StringBuilder();
       sqlQuery.AppendLine(String.Concat("UPDATE Character SET [Name] = '", character.Name,
-        "', [Race] = '", character.Race, "', [Role] = '", character.Role, "' WHERE [Id] = '", character.Id, "';"));
+        "', [Race] = '", character.Race, "', [Role] = '", character.Role, "' WHERE [Id] = '", id, "';"));
       // Tenta extrair resultado da consulta do banco
       try
       {
@@ -162,7 +162,7 @@ namespace LearningWindowsForms.repository
     public static void Delete(Character character, int id = 0)
     {
       // Instancia a conexão
-      SQLiteConnection connection = new SQLiteConnection();
+      SQLiteConnection connection = new SQLiteConnection(_ConnectionString);
       // Cria a string de comando SQL baseada na entrada
       StringBuilder sqlQuery = new StringBuilder();
       if (id != 0)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LearningWindowsForms.services;
+using System;
 
 namespace LearningWindowsForms.repository
 {
@@ -23,7 +24,7 @@ namespace LearningWindowsForms.repository
       }
       catch (Exception ex)
       {
-        Log(ex.Message);
+        Utility.Log(ex.Message);
         return string.Empty;
       }
     }

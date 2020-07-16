@@ -1,6 +1,6 @@
 ﻿namespace LearningWindowsForms.view
 {
-  partial class Details
+  partial class ScreenDetails
   {
     /// <summary>
     /// Required designer variable.
@@ -28,10 +28,11 @@
     /// </summary>
     private void InitializeComponent()
     {
-      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Details));
+      System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ScreenDetails));
       this.toolStrip1 = new System.Windows.Forms.ToolStrip();
       this.BtnBack = new System.Windows.Forms.ToolStripButton();
       this.BtnEdit = new System.Windows.Forms.ToolStripButton();
+      this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
       this.LblNameDetail = new System.Windows.Forms.Label();
       this.LblNameValue = new System.Windows.Forms.Label();
       this.LblRaceValue = new System.Windows.Forms.Label();
@@ -46,7 +47,8 @@
       this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
       this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.BtnBack,
-            this.BtnEdit});
+            this.BtnEdit,
+            this.toolStripButton1});
       this.toolStrip1.Location = new System.Drawing.Point(0, 0);
       this.toolStrip1.Name = "toolStrip1";
       this.toolStrip1.Size = new System.Drawing.Size(385, 27);
@@ -61,6 +63,7 @@
       this.BtnBack.Name = "BtnBack";
       this.BtnBack.Size = new System.Drawing.Size(29, 24);
       this.BtnBack.Text = "Voltar";
+      this.BtnBack.Click += new System.EventHandler(this.BackButtonClicked);
       // 
       // BtnEdit
       // 
@@ -70,6 +73,17 @@
       this.BtnEdit.Name = "BtnEdit";
       this.BtnEdit.Size = new System.Drawing.Size(29, 24);
       this.BtnEdit.Text = "Editar";
+      this.BtnEdit.Click += new System.EventHandler(this.EditButtonClicked);
+      // 
+      // toolStripButton1
+      // 
+      this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+      this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+      this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+      this.toolStripButton1.Name = "toolStripButton1";
+      this.toolStripButton1.Size = new System.Drawing.Size(29, 24);
+      this.toolStripButton1.Text = "toolStripButton1";
+      this.toolStripButton1.Click += new System.EventHandler(this.DeleteButtonClicked);
       // 
       // LblNameDetail
       // 
@@ -125,7 +139,7 @@
       this.LblRoleDetail.TabIndex = 5;
       this.LblRoleDetail.Text = "Classe";
       // 
-      // Details
+      // ScreenDetails
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -137,8 +151,9 @@
       this.Controls.Add(this.LblNameValue);
       this.Controls.Add(this.LblNameDetail);
       this.Controls.Add(this.toolStrip1);
-      this.Name = "Details";
-      this.Text = "Details";
+      this.Name = "ScreenDetails";
+      this.Text = "Titulo";
+      this.Load += new System.EventHandler(this.OnLoad);
       this.toolStrip1.ResumeLayout(false);
       this.toolStrip1.PerformLayout();
       this.ResumeLayout(false);
@@ -157,5 +172,6 @@
     private System.Windows.Forms.Label LblRaceDetail;
     private System.Windows.Forms.Label LblRoleValue;
     private System.Windows.Forms.Label LblRoleDetail;
+    private System.Windows.Forms.ToolStripButton toolStripButton1;
   }
 }

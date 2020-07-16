@@ -61,6 +61,7 @@
       this.BtnCancel.Name = "BtnCancel";
       this.BtnCancel.Size = new System.Drawing.Size(29, 24);
       this.BtnCancel.Text = "Cancelar";
+      this.BtnCancel.Click += new System.EventHandler(this.CloseButtonClicked);
       // 
       // BtnSave
       // 
@@ -70,7 +71,7 @@
       this.BtnSave.Name = "BtnSave";
       this.BtnSave.Size = new System.Drawing.Size(29, 24);
       this.BtnSave.Text = "Salvar";
-      this.BtnSave.Click += new System.EventHandler(this.Save);
+      this.BtnSave.Click += new System.EventHandler(this.ButtonSaveClicked);
       // 
       // LblNameEdit
       // 
@@ -134,6 +135,7 @@
       this.Controls.Add(this.toolStrip1);
       this.Name = "Edit";
       this.Text = "Edit";
+      this.Load += new System.EventHandler(this.OnLoad);
       this.toolStrip1.ResumeLayout(false);
       this.toolStrip1.PerformLayout();
       this.ResumeLayout(false);

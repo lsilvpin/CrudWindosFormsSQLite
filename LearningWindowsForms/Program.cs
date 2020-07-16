@@ -15,7 +15,7 @@ namespace LearningWindowsForms
     static void Main()
     {
       Utility.Log("Programa iniciou --------------------------------------------------");
-      Utility.ValidateAndLog(Utility.PrepareEnvironmentForWindowsForms(), "PrepareEnvironmentForWindowsForms");
+      Utility.ValidateAndLog(Utility.PrepareEnvironmentForWindowsForms(), "PrepareEnvironmentForWindowsForms()");
     }
   }
 }

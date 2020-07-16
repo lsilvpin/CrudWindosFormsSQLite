@@ -18,9 +18,8 @@ namespace LearningWindowsForms.model
     public string Role { get; set; } // Estilo
     // Construtores
     public Character() : base() {}
-    public Character(int id, string name, string race, string role)
+    public Character(string name, string race, string role)
     {
-      Id = id;
       Name = name;
       Race = race;
       Role = role;

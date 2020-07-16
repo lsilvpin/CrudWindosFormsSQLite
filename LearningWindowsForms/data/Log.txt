@@ -1,30 +1,273 @@
-﻿14/07/2020 20:22:15: Erro de rede ou específico à instância ao estabelecer conexão com o SQL Server. O servidor não foi encontrado ou não estava acessível. Verifique se o nome da instância está correto e se o SQL Server está configurado para permitir conexões remotas. (provider: SQL Network Interfaces, error: 26 - Erro ao Localizar Servidor/Instância Especificada)
-14/07/2020 20:48:38: unable to open database file
-14/07/2020 20:49:27: unable to open database file
-14/07/2020 20:53:23: Invalid ConnectionString format for part "C:\Users\lsilvpin\source\repos\LearningWindowsForms\LearningWindowsForms\data\learningwindowsforms.db", no equal sign found
-14/07/2020 20:54:47: unable to open database file
-14/07/2020 20:57:16: Invalid ConnectionString format, cannot parse: string value to split cannot be null
-14/07/2020 21:33:27: unable to open database file
-14/07/2020 21:34:02: unable to open database file
-14/07/2020 22:38:53: SQL logic error
-no such column: Race
-14/07/2020 22:41:02: SQL logic error
-no such column: Race
-14/07/2020 22:42:39: SQL logic error
-row value misused
-14/07/2020 22:44:00: SQL logic error
-row value misused
-14/07/2020 22:47:01: SQL logic error
-row value misused
-14/07/2020 22:47:48: SQL logic error
-row value misused
-14/07/2020 22:48:58: SQL logic error
-row value misused
-14/07/2020 22:49:53: SQL logic error
-row value misused
-14/07/2020 22:50:34: SQL logic error
-row value misused
-14/07/2020 22:51:17: SQL logic error
-row value misused
-14/07/2020 23:39:31: DataReader already active on this command
-14/07/2020 23:40:37: DataReader already active on this command
+15/07/2020 16:48:57: Programa iniciou --------------------------------------------------
+15/07/2020 16:48:57: A função PrepareEnvironmentForWindowsForms() executou com sucesso!
+15/07/2020 16:49:18: A função NavigateTo() executou com sucesso!
+15/07/2020 16:52:07: Programa iniciou --------------------------------------------------
+15/07/2020 16:52:08: A função PrepareEnvironmentForWindowsForms() executou com sucesso!
+15/07/2020 16:52:09: A função NavigateTo("Index") executou com sucesso!
+15/07/2020 16:56:39: Programa iniciou --------------------------------------------------
+15/07/2020 16:56:40: A função PrepareEnvironmentForWindowsForms() executou com sucesso!
+15/07/2020 16:56:42: Iniciar um segundo loop de mensagens em um único thread não é uma operação válida. Use Form.ShowDialog.
+15/07/2020 16:56:42: A função NavigateTo("Edit") finalizou com erro(s)!
+15/07/2020 16:56:52: Iniciar um segundo loop de mensagens em um único thread não é uma operação válida. Use Form.ShowDialog.
+15/07/2020 16:56:52: A função NavigateTo("Edit") finalizou com erro(s)!
+15/07/2020 16:56:53: Iniciar um segundo loop de mensagens em um único thread não é uma operação válida. Use Form.ShowDialog.
+15/07/2020 16:56:53: A função NavigateTo("Edit") finalizou com erro(s)!
+15/07/2020 16:56:53: Iniciar um segundo loop de mensagens em um único thread não é uma operação válida. Use Form.ShowDialog.
+15/07/2020 16:56:53: A função NavigateTo("Edit") finalizou com erro(s)!
+15/07/2020 16:56:53: Iniciar um segundo loop de mensagens em um único thread não é uma operação válida. Use Form.ShowDialog.
+15/07/2020 16:56:53: A função NavigateTo("Edit") finalizou com erro(s)!
+15/07/2020 16:56:54: Iniciar um segundo loop de mensagens em um único thread não é uma operação válida. Use Form.ShowDialog.
+15/07/2020 16:56:54: A função NavigateTo("Edit") finalizou com erro(s)!
+15/07/2020 16:56:54: Iniciar um segundo loop de mensagens em um único thread não é uma operação válida. Use Form.ShowDialog.
+15/07/2020 16:56:54: A função NavigateTo("Edit") finalizou com erro(s)!
+15/07/2020 16:56:54: Iniciar um segundo loop de mensagens em um único thread não é uma operação válida. Use Form.ShowDialog.
+15/07/2020 16:56:54: A função NavigateTo("Edit") finalizou com erro(s)!
+15/07/2020 16:56:54: Iniciar um segundo loop de mensagens em um único thread não é uma operação válida. Use Form.ShowDialog.
+15/07/2020 16:56:54: A função NavigateTo("Edit") finalizou com erro(s)!
+15/07/2020 16:56:55: Iniciar um segundo loop de mensagens em um único thread não é uma operação válida. Use Form.ShowDialog.
+15/07/2020 16:56:55: A função NavigateTo("Edit") finalizou com erro(s)!
+15/07/2020 16:57:02: A função NavigateTo("Index") executou com sucesso!
+15/07/2020 16:57:29: Programa iniciou --------------------------------------------------
+15/07/2020 16:57:30: A função PrepareEnvironmentForWindowsForms() executou com sucesso!
+15/07/2020 16:57:53: Iniciar um segundo loop de mensagens em um único thread não é uma operação válida. Use Form.ShowDialog.
+15/07/2020 16:57:57: A função NavigateTo("Edit") finalizou com erro(s)!
+15/07/2020 17:13:35: Programa iniciou --------------------------------------------------
+15/07/2020 17:15:05: A função NavigateTo("Edit") executou com sucesso!
+15/07/2020 17:15:10: A função NavigateTo("Edit") executou com sucesso!
+15/07/2020 17:15:12: A função NavigateTo("Edit") executou com sucesso!
+15/07/2020 17:15:13: A função PrepareEnvironmentForWindowsForms() executou com sucesso!
+15/07/2020 17:52:37: Programa iniciou --------------------------------------------------
+15/07/2020 17:52:55: Invalid ConnectionString format, cannot parse: string value to split cannot be null
+15/07/2020 17:52:55: A função CreateRecordInDataBase(Vegeta, Sayajin, Lutador) executou com sucesso!
+15/07/2020 17:52:55: A função NavigateTo("Edit") executou com sucesso!
+15/07/2020 17:53:16: A função PrepareEnvironmentForWindowsForms() executou com sucesso!
+15/07/2020 17:56:18: Programa iniciou --------------------------------------------------
+15/07/2020 17:56:39: Invalid ConnectionString format, cannot parse: string value to split cannot be null
+15/07/2020 17:56:39: A função CreateRecordInDataBase(Tenchinram, Humano, TresOlhos) executou com sucesso!
+15/07/2020 17:56:39: A função NavigateTo("Edit") executou com sucesso!
+15/07/2020 17:57:22: A função PrepareEnvironmentForWindowsForms() executou com sucesso!
+15/07/2020 17:58:54: Programa iniciou --------------------------------------------------
+15/07/2020 18:00:02: Invalid ConnectionString format, cannot parse: string value to split cannot be null
+15/07/2020 18:00:02: A função CreateRecordInDataBase(Vegeta, Sayajin, Lutador) executou com sucesso!
+15/07/2020 18:00:02: A função NavigateTo("Edit") executou com sucesso!
+15/07/2020 18:00:04: A função PrepareEnvironmentForWindowsForms() executou com sucesso!
+15/07/2020 18:01:02: Programa iniciou --------------------------------------------------
+15/07/2020 18:01:14: A função CreateRecordInDataBase(Vegeta, Sayajin, Lutador) executou com sucesso!
+15/07/2020 18:01:14: A função NavigateTo("Edit") executou com sucesso!
+15/07/2020 18:01:43: A função CreateRecordInDataBase(Bulma, Humana, Cientista) executou com sucesso!
+15/07/2020 18:01:43: A função NavigateTo("Edit") executou com sucesso!
+15/07/2020 18:03:08: A função NavigateTo("Edit") executou com sucesso!
+15/07/2020 18:03:09: A função PrepareEnvironmentForWindowsForms() executou com sucesso!
+15/07/2020 18:10:17: Programa iniciou --------------------------------------------------
+15/07/2020 18:10:21: A função PrepareEnvironmentForWindowsForms() executou com sucesso!
+15/07/2020 18:10:34: Programa iniciou --------------------------------------------------
+15/07/2020 18:10:41: A função PrepareEnvironmentForWindowsForms() executou com sucesso!
+15/07/2020 18:24:41: Programa iniciou --------------------------------------------------
+15/07/2020 18:24:45: A função PrepareEnvironmentForWindowsForms() executou com sucesso!
+15/07/2020 18:46:18: Programa iniciou --------------------------------------------------
+15/07/2020 18:46:28: A função SearchForRecordsInDataBase("k") executou com sucesso!
+15/07/2020 18:46:45: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 18:48:39: A função CreateRecordInDataBase(Mestre Kame, Humano, Mestre de Artes Marciais) executou com sucesso!
+15/07/2020 18:48:39: A função NavigateTo("Create") executou com sucesso!
+15/07/2020 18:48:41: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 18:49:42: A função PrepareEnvironmentForWindowsForms() executou com sucesso!
+15/07/2020 19:22:54: Programa iniciou --------------------------------------------------
+15/07/2020 19:23:00: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 19:23:03: A função SearchForRecordsInDataBase("k") executou com sucesso!
+15/07/2020 19:23:05: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 19:23:05: A função SearchForRecordsInDataBase("G") executou com sucesso!
+15/07/2020 19:23:07: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 19:23:07: A função SearchForRecordsInDataBase("S") executou com sucesso!
+15/07/2020 19:23:08: A função SearchForRecordsInDataBase("Sa") executou com sucesso!
+15/07/2020 19:23:08: A função SearchForRecordsInDataBase("Say") executou com sucesso!
+15/07/2020 19:23:10: A função SearchForRecordsInDataBase("Sa") executou com sucesso!
+15/07/2020 19:23:10: A função SearchForRecordsInDataBase("S") executou com sucesso!
+15/07/2020 19:23:10: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 19:23:10: A função SearchForRecordsInDataBase("H") executou com sucesso!
+15/07/2020 19:23:11: A função SearchForRecordsInDataBase("Hu") executou com sucesso!
+15/07/2020 19:23:11: A função SearchForRecordsInDataBase("Hum") executou com sucesso!
+15/07/2020 19:23:11: A função SearchForRecordsInDataBase("Huma") executou com sucesso!
+15/07/2020 19:23:11: A função SearchForRecordsInDataBase("Human") executou com sucesso!
+15/07/2020 19:23:11: A função SearchForRecordsInDataBase("Humano") executou com sucesso!
+15/07/2020 19:23:13: A função SearchForRecordsInDataBase("Human") executou com sucesso!
+15/07/2020 19:23:13: A função SearchForRecordsInDataBase("Huma") executou com sucesso!
+15/07/2020 19:23:13: A função SearchForRecordsInDataBase("Hum") executou com sucesso!
+15/07/2020 19:23:13: A função SearchForRecordsInDataBase("Hu") executou com sucesso!
+15/07/2020 19:23:14: A função SearchForRecordsInDataBase("H") executou com sucesso!
+15/07/2020 19:23:14: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 19:23:14: A função SearchForRecordsInDataBase("C") executou com sucesso!
+15/07/2020 19:23:14: A função SearchForRecordsInDataBase("Cu") executou com sucesso!
+15/07/2020 19:23:15: A função SearchForRecordsInDataBase("Cuz") executou com sucesso!
+15/07/2020 19:23:15: A função SearchForRecordsInDataBase("Cuzã") executou com sucesso!
+15/07/2020 19:23:15: A função SearchForRecordsInDataBase("Cuzão") executou com sucesso!
+15/07/2020 19:23:16: A função SearchForRecordsInDataBase("Cuzã") executou com sucesso!
+15/07/2020 19:23:16: A função SearchForRecordsInDataBase("Cuz") executou com sucesso!
+15/07/2020 19:23:16: A função SearchForRecordsInDataBase("Cu") executou com sucesso!
+15/07/2020 19:23:16: A função SearchForRecordsInDataBase("C") executou com sucesso!
+15/07/2020 19:23:16: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 19:23:18: A função SearchForRecordsInDataBase("L") executou com sucesso!
+15/07/2020 19:23:18: A função SearchForRecordsInDataBase("Lu") executou com sucesso!
+15/07/2020 19:23:18: A função SearchForRecordsInDataBase("Lut") executou com sucesso!
+15/07/2020 19:23:18: A função SearchForRecordsInDataBase("Luta") executou com sucesso!
+15/07/2020 19:23:18: A função SearchForRecordsInDataBase("Lutad") executou com sucesso!
+15/07/2020 19:23:19: A função SearchForRecordsInDataBase("Lutado") executou com sucesso!
+15/07/2020 19:23:19: A função SearchForRecordsInDataBase("Lutador") executou com sucesso!
+15/07/2020 19:23:19: A função SearchForRecordsInDataBase("Lutado") executou com sucesso!
+15/07/2020 19:23:19: A função SearchForRecordsInDataBase("Lutad") executou com sucesso!
+15/07/2020 19:23:19: A função SearchForRecordsInDataBase("Luta") executou com sucesso!
+15/07/2020 19:23:20: A função SearchForRecordsInDataBase("Lut") executou com sucesso!
+15/07/2020 19:23:20: A função SearchForRecordsInDataBase("Lu") executou com sucesso!
+15/07/2020 19:23:20: A função SearchForRecordsInDataBase("L") executou com sucesso!
+15/07/2020 19:23:20: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 19:23:21: A função SearchForRecordsInDataBase("M") executou com sucesso!
+15/07/2020 19:23:22: A função SearchForRecordsInDataBase("ME") executou com sucesso!
+15/07/2020 19:23:22: A função SearchForRecordsInDataBase("MEs") executou com sucesso!
+15/07/2020 19:23:22: A função SearchForRecordsInDataBase("MEst") executou com sucesso!
+15/07/2020 19:23:22: A função SearchForRecordsInDataBase("MEstr") executou com sucesso!
+15/07/2020 19:23:22: A função SearchForRecordsInDataBase("MEstre") executou com sucesso!
+15/07/2020 19:23:23: A função SearchForRecordsInDataBase("MEstr") executou com sucesso!
+15/07/2020 19:23:24: A função SearchForRecordsInDataBase("MEst") executou com sucesso!
+15/07/2020 19:23:24: A função SearchForRecordsInDataBase("MEs") executou com sucesso!
+15/07/2020 19:23:24: A função SearchForRecordsInDataBase("ME") executou com sucesso!
+15/07/2020 19:23:24: A função SearchForRecordsInDataBase("M") executou com sucesso!
+15/07/2020 19:23:24: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 19:23:26: A função SearchForRecordsInDataBase("G") executou com sucesso!
+15/07/2020 19:23:28: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 19:23:28: A função SearchForRecordsInDataBase("V") executou com sucesso!
+15/07/2020 19:23:29: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 19:23:30: A função SearchForRecordsInDataBase("B") executou com sucesso!
+15/07/2020 19:23:32: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 19:23:33: A função SearchForRecordsInDataBase("U") executou com sucesso!
+15/07/2020 19:23:34: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 19:23:35: A função SearchForRecordsInDataBase("u") executou com sucesso!
+15/07/2020 19:23:38: A função SearchForRecordsInDataBase("um") executou com sucesso!
+15/07/2020 19:23:40: A função SearchForRecordsInDataBase("u") executou com sucesso!
+15/07/2020 19:23:41: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 19:24:18: A função CreateRecordInDataBase(Pual, Gato, Feiticeiro) executou com sucesso!
+15/07/2020 19:24:18: A função NavigateTo("Create") executou com sucesso!
+15/07/2020 19:24:20: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 19:25:40: A função CreateRecordInDataBase(Ulong, Porco, Mentiroso) executou com sucesso!
+15/07/2020 19:25:40: A função NavigateTo("Edit") executou com sucesso!
+15/07/2020 19:25:43: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 19:26:52: A função SearchForRecordsInDataBase("a") executou com sucesso!
+15/07/2020 19:26:53: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 19:26:54: A função SearchForRecordsInDataBase("p") executou com sucesso!
+15/07/2020 19:27:01: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 19:27:01: A função SearchForRecordsInDataBase("m") executou com sucesso!
+15/07/2020 19:27:04: A função SearchForRecordsInDataBase("me") executou com sucesso!
+15/07/2020 19:27:07: A função SearchForRecordsInDataBase("men") executou com sucesso!
+15/07/2020 19:27:08: A função SearchForRecordsInDataBase("me") executou com sucesso!
+15/07/2020 19:27:08: A função SearchForRecordsInDataBase("m") executou com sucesso!
+15/07/2020 19:27:08: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 19:27:11: A função SearchForRecordsInDataBase("K") executou com sucesso!
+15/07/2020 19:27:35: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 19:27:37: A função PrepareEnvironmentForWindowsForms() executou com sucesso!
+15/07/2020 19:51:19: Programa iniciou --------------------------------------------------
+15/07/2020 19:51:23: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 19:51:34: A função NavigateTo("Edit") executou com sucesso!
+15/07/2020 19:51:36: A função PrepareEnvironmentForWindowsForms() executou com sucesso!
+15/07/2020 20:05:47: Programa iniciou --------------------------------------------------
+15/07/2020 20:05:47: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 20:06:15: O índice estava fora do intervalo. Ele deve ser não-negativo e menor que o tamanho da coleção.
+Nome do parâmetro: index
+15/07/2020 20:06:15: A função NavigateTo("Edit") finalizou com erro(s)!
+15/07/2020 20:06:17: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 20:06:19: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 20:07:04: A função PrepareEnvironmentForWindowsForms() executou com sucesso!
+15/07/2020 20:07:53: Programa iniciou --------------------------------------------------
+15/07/2020 20:07:54: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 20:07:57: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 20:07:57: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 20:10:26: Programa iniciou --------------------------------------------------
+15/07/2020 20:10:26: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 20:12:02: Programa iniciou --------------------------------------------------
+15/07/2020 20:12:02: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 20:13:54: Programa iniciou --------------------------------------------------
+15/07/2020 20:13:54: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 20:28:15: Programa iniciou --------------------------------------------------
+15/07/2020 20:28:15: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 20:28:31: Programa iniciou --------------------------------------------------
+15/07/2020 20:28:31: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 20:28:47: Programa iniciou --------------------------------------------------
+15/07/2020 20:28:48: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 20:29:25: Programa iniciou --------------------------------------------------
+15/07/2020 20:29:25: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 20:29:50: A função UpdateRecordInDataBase(De (Vegeta, Sayajin, Lutador) para (Vegeto, Sayajin, Lutador)) executou com sucesso!
+15/07/2020 20:29:50: A função NavigateTo("Edit") executou com sucesso!
+15/07/2020 20:29:53: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 20:29:54: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 20:29:54: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 20:29:54: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 20:29:55: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 20:29:55: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 20:29:57: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 20:30:28: A função SearchForRecordsInDataBase("v") executou com sucesso!
+15/07/2020 20:30:30: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 20:30:43: A função PrepareEnvironmentForWindowsForms() executou com sucesso!
+15/07/2020 20:31:03: Programa iniciou --------------------------------------------------
+15/07/2020 20:31:04: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 20:39:41: Programa iniciou --------------------------------------------------
+15/07/2020 20:39:41: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 20:40:09: Programa iniciou --------------------------------------------------
+15/07/2020 20:40:10: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 20:40:33: A função UpdateRecordInDataBase(De (Vegeta, Sayajin, Lutador) para (Vegeto, Sayajin, Lutador)) executou com sucesso!
+15/07/2020 20:40:33: A função NavigateTo("Edit") executou com sucesso!
+15/07/2020 20:40:36: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 20:40:50: A função PrepareEnvironmentForWindowsForms() executou com sucesso!
+15/07/2020 20:42:15: Programa iniciou --------------------------------------------------
+15/07/2020 20:42:16: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 20:42:31: A função SearchForRecordsInDataBase("d") executou com sucesso!
+15/07/2020 20:43:14: A função NavigateTo("Create") executou com sucesso!
+15/07/2020 20:43:21: A função NavigateTo("Edit") executou com sucesso!
+15/07/2020 20:44:50: A função UpdateRecordInDataBase(De (Mestre Kame, Humano, Mestre de Artes Marciais) para (Mestre Kame, Kriptoniano, Mestre de Artes Marciais)) executou com sucesso!
+15/07/2020 20:44:50: A função NavigateTo("Edit") executou com sucesso!
+15/07/2020 20:44:52: A função SearchForRecordsInDataBase("d") executou com sucesso!
+15/07/2020 20:44:59: A função SearchForRecordsInDataBase("k") executou com sucesso!
+15/07/2020 20:45:05: A função SearchForRecordsInDataBase("kr") executou com sucesso!
+15/07/2020 20:45:06: A função SearchForRecordsInDataBase("kri") executou com sucesso!
+15/07/2020 20:45:06: A função SearchForRecordsInDataBase("krip") executou com sucesso!
+15/07/2020 20:45:08: A função SearchForRecordsInDataBase("kripa") executou com sucesso!
+15/07/2020 20:45:11: A função SearchForRecordsInDataBase("krip") executou com sucesso!
+15/07/2020 20:45:11: A função SearchForRecordsInDataBase("kri") executou com sucesso!
+15/07/2020 20:45:11: A função SearchForRecordsInDataBase("kr") executou com sucesso!
+15/07/2020 20:45:11: A função SearchForRecordsInDataBase("k") executou com sucesso!
+15/07/2020 20:45:11: A função SearchForRecordsInDataBase("") executou com sucesso!
+15/07/2020 20:51:17: A função PrepareEnvironmentForWindowsForms() executou com sucesso!
+16/07/2020 08:37:40: Programa iniciou --------------------------------------------------
+16/07/2020 08:37:40: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 08:37:44: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 08:37:56: A função NavigateTo("Create") executou com sucesso!
+16/07/2020 08:38:30: A função CreateRecordInDataBase(Tao Pai Pai, Constructo, Apelão) executou com sucesso!
+16/07/2020 08:38:30: A função NavigateTo("Create") executou com sucesso!
+16/07/2020 08:38:31: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 08:41:31: Programa iniciou --------------------------------------------------
+16/07/2020 08:41:31: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 08:42:19: A função NavigateTo("Create") executou com sucesso!
+16/07/2020 08:42:20: A função PrepareEnvironmentForWindowsForms() executou com sucesso!
+16/07/2020 08:44:24: Programa iniciou --------------------------------------------------
+16/07/2020 08:44:25: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 08:44:32: A função PrepareEnvironmentForWindowsForms() executou com sucesso!
+16/07/2020 08:45:36: Programa iniciou --------------------------------------------------
+16/07/2020 08:45:37: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 08:46:01: A função PrepareEnvironmentForWindowsForms() executou com sucesso!
+16/07/2020 08:47:52: Programa iniciou --------------------------------------------------
+16/07/2020 08:47:52: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 08:48:06: A função NavigateTo("Edit") executou com sucesso!
+16/07/2020 08:48:22: A função UpdateRecordInDataBase(De (Mestre Kame, Kriptoniano, Mestre de Artes Marciais) para (Mestre Kame, Humano, Mestre de Artes Marciais)) executou com sucesso!
+16/07/2020 08:48:22: A função NavigateTo("Edit") executou com sucesso!
+16/07/2020 08:48:24: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 08:48:52: A função NavigateTo("Details ") executou com sucesso!
+16/07/2020 08:49:00: A função NavigateTo("Edit") executou com sucesso!
+16/07/2020 08:49:10: A função NavigateTo("Edit") executou com sucesso!
+16/07/2020 08:50:05: Programa iniciou --------------------------------------------------
+16/07/2020 08:50:06: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 08:53:12: Programa iniciou --------------------------------------------------
+16/07/2020 08:53:12: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 08:53:23: A função DeleteRecordInDataBase(Kuririm, Humano, Cuzão) executou com sucesso!
+16/07/2020 08:53:23: A função NavigateTo("Details ") executou com sucesso!
+16/07/2020 08:53:31: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 08:53:38: A função PrepareEnvironmentForWindowsForms() executou com sucesso!
+16/07/2020 08:54:17: Programa iniciou --------------------------------------------------
+16/07/2020 08:54:18: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 08:54:22: A função NavigateTo("Edit") executou com sucesso!
+16/07/2020 08:55:45: A função PrepareEnvironmentForWindowsForms() executou com sucesso!

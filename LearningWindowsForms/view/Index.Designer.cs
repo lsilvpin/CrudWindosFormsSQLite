@@ -38,6 +38,7 @@
       this.inputSearch = new System.Windows.Forms.ToolStripTextBox();
       this.IconSearch = new System.Windows.Forms.ToolStripButton();
       this.ListSearch = new System.Windows.Forms.ListBox();
+      this.ListBoxDescription = new System.Windows.Forms.Label();
       this.toolStrip1.SuspendLayout();
       this.SuspendLayout();
       // 
@@ -76,6 +77,7 @@
       this.BtnUpdate.Name = "BtnUpdate";
       this.BtnUpdate.Size = new System.Drawing.Size(29, 27);
       this.BtnUpdate.Text = "Editar personagem já existente";
+      this.BtnUpdate.Click += new System.EventHandler(this.EditButtonClicked);
       // 
       // BtnDelete
       // 
@@ -85,6 +87,7 @@
       this.BtnDelete.Name = "BtnDelete";
       this.BtnDelete.Size = new System.Drawing.Size(29, 27);
       this.BtnDelete.Text = "Deletar personagem";
+      this.BtnDelete.Click += new System.EventHandler(this.DeleteButtonClicked);
       // 
       // toolStripSeparator1
       // 
@@ -102,6 +105,7 @@
       this.inputSearch.Font = new System.Drawing.Font("Segoe UI", 10.2F);
       this.inputSearch.Name = "inputSearch";
       this.inputSearch.Size = new System.Drawing.Size(200, 30);
+      this.inputSearch.TextChanged += new System.EventHandler(this.WhenTextChange);
       // 
       // IconSearch
       // 
@@ -111,29 +115,39 @@
       this.IconSearch.Name = "IconSearch";
       this.IconSearch.Size = new System.Drawing.Size(29, 27);
       this.IconSearch.Text = "Pesquisar";
+      this.IconSearch.Click += new System.EventHandler(this.SearchButtonClicked);
       // 
       // ListSearch
       // 
       this.ListSearch.FormattingEnabled = true;
       this.ListSearch.ItemHeight = 16;
-      this.ListSearch.Items.AddRange(new object[] {
-            "Alfa",
-            "Beta",
-            "Gama"});
-      this.ListSearch.Location = new System.Drawing.Point(87, 64);
+      this.ListSearch.Location = new System.Drawing.Point(87, 80);
       this.ListSearch.Name = "ListSearch";
-      this.ListSearch.Size = new System.Drawing.Size(620, 308);
+      this.ListSearch.Size = new System.Drawing.Size(620, 292);
       this.ListSearch.TabIndex = 1;
+      this.ListSearch.Click += new System.EventHandler(this.ItemSelected);
+      this.ListSearch.DoubleClick += new System.EventHandler(this.EditButtonClicked);
+      // 
+      // ListBoxDescription
+      // 
+      this.ListBoxDescription.AutoSize = true;
+      this.ListBoxDescription.Location = new System.Drawing.Point(84, 60);
+      this.ListBoxDescription.Name = "ListBoxDescription";
+      this.ListBoxDescription.Size = new System.Drawing.Size(123, 17);
+      this.ListBoxDescription.TabIndex = 2;
+      this.ListBoxDescription.Text = "Name, Race, Role";
       // 
       // Index
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(800, 450);
+      this.Controls.Add(this.ListBoxDescription);
       this.Controls.Add(this.ListSearch);
       this.Controls.Add(this.toolStrip1);
       this.Name = "Index";
-      this.Text = "Index";
+      this.Text = "Aplicação WindowsForms para aprender CRUD com SQLite";
+      this.Load += new System.EventHandler(this.OnLoad);
       this.toolStrip1.ResumeLayout(false);
       this.toolStrip1.PerformLayout();
       this.ResumeLayout(false);
@@ -152,5 +166,6 @@
     private System.Windows.Forms.ToolStripTextBox inputSearch;
     private System.Windows.Forms.ToolStripButton IconSearch;
     private System.Windows.Forms.ListBox ListSearch;
+    private System.Windows.Forms.Label ListBoxDescription;
   }
 }

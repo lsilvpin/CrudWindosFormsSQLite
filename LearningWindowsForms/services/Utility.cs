@@ -1,6 +1,8 @@
 ﻿using LearningWindowsForms.model;
 using LearningWindowsForms.repository;
+using LearningWindowsForms.view;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Windows.Forms;
@@ -12,6 +14,12 @@ namespace LearningWindowsForms.services
   /// </summary>
   class Utility
   {
+    // Gaveta para guardar coisas importantes
+    public static List<Character> Characters { get; set; }
+    public static Character SelectedItem { get; set; } // Guarda item selecionado na ListBox
+    public static bool CreateOrEditMode { get; set; } // Armazena tipo da janela Edit
+    public static bool DeleteOrReadMode { get; set; } // Tipo da janela Details
+
     // Informações necessárias na definição dos métodos abaixo
     private static string _LocalRepository = @"C:\Users\lsilvpin\source\repos"; // MapPath()
     private static string _LogPath = @"~\LearningWindowsForms\LearningWindowsForms\data\Log.txt"; // Log()
@@ -48,6 +56,8 @@ namespace LearningWindowsForms.services
       try
       {
         Seed.Create(character); // Chamamos o C do CRUD
+        MessageBox.Show(String.Concat(character.Name, ", ", character.Race,
+           ", ", character.Role, " foi salvo com sucesso! =]"));
         return true;
       }
       catch (Exception ex)
@@ -65,7 +75,7 @@ namespace LearningWindowsForms.services
     {
       try
       {
-        Seed.Read(search, id);
+        Characters = Seed.Read(search, id);
         return true;
       }
       catch (Exception ex)
@@ -79,15 +89,19 @@ namespace LearningWindowsForms.services
     /// </summary>
     /// <param name="id">id do registro que será atualisado</param>
     /// <param name="character">objeto Character com infos a serem submetidos ao banco</param>
-    public static bool UpdateRecordInDataBase(Character character)
+    public static bool UpdateRecordInDataBase(Character oldCharacter, Character newCharacter)
     {
-      if (character.Id == 0)
+      if (oldCharacter.Id == 0)
       { // Se vier sem Id, tem que vir com Nome, e achamos o Id pelo nome
-        character.Id = Seed.Read(character.Name)[0].Id;
+        oldCharacter.Id = Seed.Read(oldCharacter.Name)[0].Id;
       }
       try
       {
-        Seed.Update(character.Id, character);
+        Seed.Update(oldCharacter.Id, newCharacter);
+        MessageBox.Show(String.Concat("O registro (",oldCharacter.Name,", ",
+          oldCharacter.Race,", ",oldCharacter.Role,") foi atualizado para (",
+          newCharacter.Name,", ",newCharacter.Race,", ",newCharacter.Role,
+          ") com sucesso! =]"));
         return true;
       }
       catch (Exception ex)
@@ -105,6 +119,8 @@ namespace LearningWindowsForms.services
       try
       {
         Seed.Delete(character);
+        MessageBox.Show(String.Concat(character.Name, ", ", character.Race,
+           ", ", character.Role, " foi deletado com sucesso! =]"));
         return true;
       }
       catch (Exception ex)
@@ -124,9 +140,10 @@ namespace LearningWindowsForms.services
     {
       try
       {
+        Utility.CreateDataBaseIfNecessary();
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
-        Utility.CreateDataBaseIfNecessary();
+        Application.Run(new Index());
         return true;
       }
       catch (Exception ex)
@@ -136,15 +153,39 @@ namespace LearningWindowsForms.services
       }
 
     }
-
+    /// <summary>
+    /// Método que navega para a janela escolhida
+    /// </summary>
+    /// <param name="windowName">Nome da janela escolhida</param>
+    /// <returns>Instancia uma janela nova, e constrói ela na tela</returns>
     public static bool NavigateTo(string windowName)
     {
       try
       {
-
-        return true;
+        if (windowName == "Index")
+        {
+          Index index = new Index();
+          index.ShowDialog();
+          return true;
+        }
+        else if (windowName == "Create" || windowName == "Edit")
+        {
+          Edit edit = new Edit();
+          edit.ShowDialog();
+          return true;
+        }
+        else if (windowName == "Details")
+        {
+          ScreenDetails details = new ScreenDetails();
+          details.ShowDialog();
+          return true;
+        }
+        else
+        {
+          throw new Exception(String.Concat("A suposta janela ", windowName, "não foi encontrada, e portanto o prosseço parou!"));
+        }
       }
-      catch(Exception ex)
+      catch (Exception ex)
       {
         Log(ex.Message);
         return false;
@@ -213,11 +254,11 @@ namespace LearningWindowsForms.services
     {
       if (serviceResult)
       {
-        Log(String.Concat("A função ", serviceName, "() executou com sucesso!"));
+        Log(String.Concat("A função ", serviceName, " executou com sucesso!"));
       }
       else
       {
-        Log(String.Concat("A função ", serviceName, "() finalizou com erro(s)!"));
+        Log(String.Concat("A função ", serviceName, " finalizou com erro(s)!"));
       }
     }
     #endregion
