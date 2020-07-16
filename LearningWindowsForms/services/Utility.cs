@@ -5,7 +5,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Windows.Forms;
 
@@ -333,7 +332,7 @@ namespace LearningWindowsForms.services
           // Montamos a lista de saída na ordem requerida
           foreach (string word in words)
           {
-            outputList.AddRange(inputList.Where(character => character.Name == word));
+            outputList.AddRange(inputList.Where(character => character.Race == word));
           }
           // Retornamos a lista de personagens ordenada
           Dictionary<bool, List<Character>> output = new Dictionary<bool, List<Character>>();
@@ -354,7 +353,7 @@ namespace LearningWindowsForms.services
           // Montamos a lista de saída na ordem requerida
           foreach (string word in words)
           {
-            outputList.AddRange(inputList.Where(character => character.Name == word));
+            outputList.AddRange(inputList.Where(character => character.Role == word));
           }
           // Retornamos a lista de personagens ordenada
           Dictionary<bool, List<Character>> output = new Dictionary<bool, List<Character>>();

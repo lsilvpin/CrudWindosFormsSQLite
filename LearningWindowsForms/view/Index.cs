@@ -150,5 +150,52 @@ namespace LearningWindowsForms.view
         ListSearch.Items.Add(String.Concat(character.Name, ", ", character.Race, ", ", character.Role));
       }
     }
+    /// <summary>
+    /// Quando o usuário clica no botão OrderByRace
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    private void OrderByRace(object sender, EventArgs e)
+    {
+      // Coleta os items que estão presentes na ListBox e armazena localmente
+      List<Character> listBoxItems = Utility.ListBoxItems;
+      // Apaga os itens presentes atualmente na list box
+      ListSearch.Items.Clear();
+      // Reordena os itens armazenados para reconstruir a listbox
+      listBoxItems = Utility.OrderAscendingByColumn("Race", listBoxItems).Values.FirstOrDefault();
+      // Reconstrói a list box, com os itens na ordem correta
+      foreach (Character character in listBoxItems)
+      {
+        ListSearch.Items.Add(String.Concat(character.Name, ", ", character.Race, ", ", character.Role));
+      }
+    }
+    /// <summary>
+    /// Quando o usuário clica no botão OrderByRole
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    private void OrderByRole(object sender, EventArgs e)
+    {
+      // Coleta os items que estão presentes na ListBox e armazena localmente
+      List<Character> listBoxItems = Utility.ListBoxItems;
+      // Apaga os itens presentes atualmente na list box
+      ListSearch.Items.Clear();
+      // Reordena os itens armazenados para reconstruir a listbox
+      listBoxItems = Utility.OrderAscendingByColumn("Role", listBoxItems).Values.FirstOrDefault();
+      // Reconstrói a list box, com os itens na ordem correta
+      foreach (Character character in listBoxItems)
+      {
+        ListSearch.Items.Add(String.Concat(character.Name, ", ", character.Race, ", ", character.Role));
+      }
+    }
+    /// <summary>
+    /// Quando o aplicativo é finalizado
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    private void OnClose(object sender, FormClosedEventArgs e)
+    {
+      Utility.Log("Programa finalizado --------------------------------------------------");
+    }
   }
 }

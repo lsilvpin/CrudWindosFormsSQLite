@@ -426,3 +426,56 @@ Nome do parâmetro: index
 16/07/2020 15:09:59: A função SearchForRecordsInDataBase("") executou com sucesso!
 16/07/2020 15:19:06: Programa iniciou --------------------------------------------------
 16/07/2020 15:19:06: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 15:25:30: Programa iniciou --------------------------------------------------
+16/07/2020 15:25:30: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 15:25:43: A função PrepareEnvironmentForWindowsForms() executou com sucesso!
+16/07/2020 15:25:46: Programa iniciou --------------------------------------------------
+16/07/2020 15:25:47: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 15:26:15: A função PrepareEnvironmentForWindowsForms() executou com sucesso!
+16/07/2020 15:28:52: Programa iniciou --------------------------------------------------
+16/07/2020 15:28:53: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 15:29:18: A função PrepareEnvironmentForWindowsForms() executou com sucesso!
+16/07/2020 15:29:29: Programa iniciou --------------------------------------------------
+16/07/2020 15:29:29: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 15:29:51: Programa iniciou --------------------------------------------------
+16/07/2020 15:29:51: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 15:34:58: Programa iniciou --------------------------------------------------
+16/07/2020 15:34:59: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 15:35:34: A função NavigateTo("Edit") executou com sucesso!
+16/07/2020 15:35:51: A função DeleteRecordInDataBase(Bulma, Humana, Cientista) executou com sucesso!
+16/07/2020 15:35:51: A função NavigateTo("Details ") executou com sucesso!
+16/07/2020 15:35:54: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 15:36:00: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 15:36:13: A função SearchForRecordsInDataBase("A") executou com sucesso!
+16/07/2020 15:36:13: A função SearchForRecordsInDataBase("AS") executou com sucesso!
+16/07/2020 15:36:13: A função SearchForRecordsInDataBase("ASD") executou com sucesso!
+16/07/2020 15:36:14: A função SearchForRecordsInDataBase("AS") executou com sucesso!
+16/07/2020 15:36:14: A função SearchForRecordsInDataBase("A") executou com sucesso!
+16/07/2020 15:36:14: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 15:36:15: A função SearchForRecordsInDataBase("a") executou com sucesso!
+16/07/2020 15:36:15: A função SearchForRecordsInDataBase("ad") executou com sucesso!
+16/07/2020 15:36:33: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 15:36:40: A função PrepareEnvironmentForWindowsForms() executou com sucesso!
+16/07/2020 15:39:29: Programa inicializado --------------------------------------------------
+16/07/2020 15:39:30: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 15:40:00: A função CreateRecordInDataBase(Cell, Mix, Perfeito) executou com sucesso!
+16/07/2020 15:40:01: A função NavigateTo("Create") executou com sucesso!
+16/07/2020 15:40:30: A função CreateRecordInDataBase(MakinBuu, Demônio, Destruidor) executou com sucesso!
+16/07/2020 15:40:30: A função NavigateTo("Create") executou com sucesso!
+16/07/2020 15:40:35: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 15:40:49: A função UpdateRecordInDataBase(De (MakinBuu, Demônio, Destruidor) para (MajinBuu, Demônio, Destruidor)) executou com sucesso!
+16/07/2020 15:40:49: A função NavigateTo("Edit") executou com sucesso!
+16/07/2020 15:40:51: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 15:40:52: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 15:42:52: A função CreateRecordInDataBase(Babidi, Alienígena, Bruxo) executou com sucesso!
+16/07/2020 15:42:52: A função NavigateTo("Create") executou com sucesso!
+16/07/2020 15:42:53: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 15:43:09: A função CreateRecordInDataBase(Bulma, Humana, Cientista) executou com sucesso!
+16/07/2020 15:43:10: A função NavigateTo("Create") executou com sucesso!
+16/07/2020 15:43:11: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 15:43:42: A função NavigateTo("Edit") executou com sucesso!
+16/07/2020 15:43:45: A função NavigateTo("Create") executou com sucesso!
+16/07/2020 15:44:07: A função NavigateTo("Edit") executou com sucesso!
+16/07/2020 15:44:09: A função NavigateTo("Details ") executou com sucesso!
+16/07/2020 15:44:12: Programa finalizado --------------------------------------------------
+16/07/2020 15:44:12: A função PrepareEnvironmentForWindowsForms() executou com sucesso!

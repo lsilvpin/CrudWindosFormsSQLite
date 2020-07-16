@@ -180,6 +180,7 @@
       this.BtnOrderByRace.TabIndex = 6;
       this.BtnOrderByRace.Text = "Ordenar";
       this.BtnOrderByRace.UseVisualStyleBackColor = true;
+      this.BtnOrderByRace.Click += new System.EventHandler(this.OrderByRace);
       // 
       // BtnOrderByRole
       // 
@@ -190,6 +191,7 @@
       this.BtnOrderByRole.TabIndex = 7;
       this.BtnOrderByRole.Text = "Ordenar";
       this.BtnOrderByRole.UseVisualStyleBackColor = true;
+      this.BtnOrderByRole.Click += new System.EventHandler(this.OrderByRole);
       // 
       // Index
       // 
@@ -206,6 +208,7 @@
       this.Controls.Add(this.toolStrip1);
       this.Name = "Index";
       this.Text = "Aplicação WindowsForms para aprender CRUD com SQLite";
+      this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.OnClose);
       this.Load += new System.EventHandler(this.OnLoad);
       this.toolStrip1.ResumeLayout(false);
       this.toolStrip1.PerformLayout();
