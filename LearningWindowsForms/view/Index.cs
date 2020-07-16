@@ -75,9 +75,7 @@ namespace LearningWindowsForms.view
       {
         // Coleta o resultado da consulta e armazena neste escopo
         List<Character> characters = new List<Character>();
-        characters = Utility.Characters;
-        // Limpa a memória de Utility
-        Utility.Characters = null;
+        characters = Utility.ListBoxItems;
         // Limpa a ListBox
         ListSearch.Items.Clear();
         // Preenche a ListBox com as informações recebidas
@@ -132,6 +130,25 @@ namespace LearningWindowsForms.view
         ListSearch.SelectedItem.ToString().Split(',')[1].Trim(),
         ListSearch.SelectedItem.ToString().Split(',')[2].Trim()
       );
+    }
+    /// <summary>
+    /// Quando usuário clica no botão OrderByName
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
+    private void OrderByName(object sender, EventArgs e)
+    {
+      // Coleta os items que estão presentes na ListBox e armazena localmente
+      List<Character> listBoxItems = Utility.ListBoxItems;
+      // Apaga os itens presentes atualmente na list box
+      ListSearch.Items.Clear();
+      // Reordena os itens armazenados para reconstruir a listbox
+      listBoxItems = Utility.OrderAscendingByColumn("Name", listBoxItems).Values.FirstOrDefault();
+      // Reconstrói a list box, com os itens na ordem correta
+      foreach (Character character in listBoxItems)
+      {
+        ListSearch.Items.Add(String.Concat(character.Name, ", ", character.Race, ", ", character.Role));
+      }
     }
   }
 }

@@ -271,3 +271,158 @@ Nome do parâmetro: index
 16/07/2020 08:54:18: A função SearchForRecordsInDataBase("") executou com sucesso!
 16/07/2020 08:54:22: A função NavigateTo("Edit") executou com sucesso!
 16/07/2020 08:55:45: A função PrepareEnvironmentForWindowsForms() executou com sucesso!
+16/07/2020 09:37:49: Programa iniciou --------------------------------------------------
+16/07/2020 09:37:49: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 09:37:55: A função SearchForRecordsInDataBase("S") executou com sucesso!
+16/07/2020 09:37:55: A função SearchForRecordsInDataBase("Sa") executou com sucesso!
+16/07/2020 09:37:55: A função SearchForRecordsInDataBase("Say") executou com sucesso!
+16/07/2020 09:37:55: A função SearchForRecordsInDataBase("Saya") executou com sucesso!
+16/07/2020 09:37:55: A função SearchForRecordsInDataBase("Sayaj") executou com sucesso!
+16/07/2020 09:37:55: A função SearchForRecordsInDataBase("Sayaji") executou com sucesso!
+16/07/2020 09:37:56: A função SearchForRecordsInDataBase("Sayajin") executou com sucesso!
+16/07/2020 09:37:57: A função SearchForRecordsInDataBase("Sayaji") executou com sucesso!
+16/07/2020 09:37:58: A função SearchForRecordsInDataBase("Sayaj") executou com sucesso!
+16/07/2020 09:37:58: A função SearchForRecordsInDataBase("Saya") executou com sucesso!
+16/07/2020 09:37:58: A função SearchForRecordsInDataBase("Say") executou com sucesso!
+16/07/2020 09:37:58: A função SearchForRecordsInDataBase("Sa") executou com sucesso!
+16/07/2020 09:37:58: A função SearchForRecordsInDataBase("S") executou com sucesso!
+16/07/2020 09:37:58: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 09:37:58: A função SearchForRecordsInDataBase("L") executou com sucesso!
+16/07/2020 09:37:59: A função SearchForRecordsInDataBase("Lu") executou com sucesso!
+16/07/2020 09:37:59: A função SearchForRecordsInDataBase("Lut") executou com sucesso!
+16/07/2020 09:37:59: A função SearchForRecordsInDataBase("Luta") executou com sucesso!
+16/07/2020 09:37:59: A função SearchForRecordsInDataBase("Lutad") executou com sucesso!
+16/07/2020 09:37:59: A função SearchForRecordsInDataBase("Lutado") executou com sucesso!
+16/07/2020 09:37:59: A função SearchForRecordsInDataBase("Lutador") executou com sucesso!
+16/07/2020 09:38:01: A função SearchForRecordsInDataBase("Lutado") executou com sucesso!
+16/07/2020 09:38:02: A função SearchForRecordsInDataBase("Lutad") executou com sucesso!
+16/07/2020 09:38:02: A função SearchForRecordsInDataBase("Luta") executou com sucesso!
+16/07/2020 09:38:02: A função SearchForRecordsInDataBase("Lut") executou com sucesso!
+16/07/2020 09:38:02: A função SearchForRecordsInDataBase("Lu") executou com sucesso!
+16/07/2020 09:38:02: A função SearchForRecordsInDataBase("L") executou com sucesso!
+16/07/2020 09:38:02: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 09:38:02: A função SearchForRecordsInDataBase("V") executou com sucesso!
+16/07/2020 09:38:03: A função SearchForRecordsInDataBase("Ve") executou com sucesso!
+16/07/2020 09:38:03: A função SearchForRecordsInDataBase("Veg") executou com sucesso!
+16/07/2020 09:38:03: A função SearchForRecordsInDataBase("Vege") executou com sucesso!
+16/07/2020 09:38:03: A função SearchForRecordsInDataBase("Veget") executou com sucesso!
+16/07/2020 09:38:03: A função SearchForRecordsInDataBase("Vegeta") executou com sucesso!
+16/07/2020 09:38:04: A função SearchForRecordsInDataBase("Veget") executou com sucesso!
+16/07/2020 09:38:05: A função SearchForRecordsInDataBase("Vegeto") executou com sucesso!
+16/07/2020 09:38:06: A função SearchForRecordsInDataBase("Veget") executou com sucesso!
+16/07/2020 09:38:06: A função SearchForRecordsInDataBase("Vege") executou com sucesso!
+16/07/2020 09:38:07: A função SearchForRecordsInDataBase("Veg") executou com sucesso!
+16/07/2020 09:38:15: A função UpdateRecordInDataBase(De (Vegeto, Sayajin, Lutador) para (Vegeta, Sayajin, Lutador)) executou com sucesso!
+16/07/2020 09:38:15: A função NavigateTo("Edit") executou com sucesso!
+16/07/2020 09:38:17: A função SearchForRecordsInDataBase("Veg") executou com sucesso!
+16/07/2020 09:38:21: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 09:38:56: A função CreateRecordInDataBase(Gohan, Meio Sayajin, Pesquisador) executou com sucesso!
+16/07/2020 09:38:56: A função NavigateTo("Create") executou com sucesso!
+16/07/2020 09:38:58: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 09:39:08: A função SearchForRecordsInDataBase("G") executou com sucesso!
+16/07/2020 09:39:08: A função SearchForRecordsInDataBase("Go") executou com sucesso!
+16/07/2020 09:39:09: A função SearchForRecordsInDataBase("Goh") executou com sucesso!
+16/07/2020 09:39:09: A função SearchForRecordsInDataBase("Goha") executou com sucesso!
+16/07/2020 09:39:09: A função SearchForRecordsInDataBase("Gohan") executou com sucesso!
+16/07/2020 09:39:10: A função SearchForRecordsInDataBase("Goha") executou com sucesso!
+16/07/2020 09:39:10: A função SearchForRecordsInDataBase("Goh") executou com sucesso!
+16/07/2020 09:39:10: A função SearchForRecordsInDataBase("Go") executou com sucesso!
+16/07/2020 09:39:10: A função SearchForRecordsInDataBase("G") executou com sucesso!
+16/07/2020 09:39:10: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 09:39:12: A função SearchForRecordsInDataBase("P") executou com sucesso!
+16/07/2020 09:39:13: A função SearchForRecordsInDataBase("Pi") executou com sucesso!
+16/07/2020 09:39:13: A função SearchForRecordsInDataBase("Pic") executou com sucesso!
+16/07/2020 09:39:13: A função SearchForRecordsInDataBase("Pico") executou com sucesso!
+16/07/2020 09:39:13: A função SearchForRecordsInDataBase("Picol") executou com sucesso!
+16/07/2020 09:39:13: A função SearchForRecordsInDataBase("Picolo") executou com sucesso!
+16/07/2020 09:39:14: A função SearchForRecordsInDataBase("Picol") executou com sucesso!
+16/07/2020 09:39:14: A função SearchForRecordsInDataBase("Pico") executou com sucesso!
+16/07/2020 09:39:14: A função SearchForRecordsInDataBase("Pic") executou com sucesso!
+16/07/2020 09:39:14: A função SearchForRecordsInDataBase("Pi") executou com sucesso!
+16/07/2020 09:39:14: A função SearchForRecordsInDataBase("P") executou com sucesso!
+16/07/2020 09:39:14: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 09:39:38: A função CreateRecordInDataBase(Piccollo, Namekuzeindin, Guerreiro de Elite) executou com sucesso!
+16/07/2020 09:39:38: A função NavigateTo("Create") executou com sucesso!
+16/07/2020 09:39:41: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 09:43:43: A função PrepareEnvironmentForWindowsForms() executou com sucesso!
+16/07/2020 12:55:06: Programa iniciou --------------------------------------------------
+16/07/2020 12:55:07: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 12:55:11: O índice estava fora dos limites da matriz.
+16/07/2020 12:55:11: A função PrepareEnvironmentForWindowsForms() finalizou com erro(s)!
+16/07/2020 12:55:34: Programa iniciou --------------------------------------------------
+16/07/2020 12:55:35: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 12:55:40: O índice estava fora dos limites da matriz.
+16/07/2020 12:55:40: A função PrepareEnvironmentForWindowsForms() finalizou com erro(s)!
+16/07/2020 13:34:57: Programa iniciou --------------------------------------------------
+16/07/2020 13:34:57: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 13:35:01: O índice estava fora dos limites da matriz.
+16/07/2020 13:35:11: O índice estava fora dos limites da matriz.
+16/07/2020 13:35:12: O índice estava fora dos limites da matriz.
+16/07/2020 13:35:13: O índice estava fora dos limites da matriz.
+16/07/2020 13:35:14: Já foi adicionado um item com a mesma chave.
+16/07/2020 13:35:33: Já foi adicionado um item com a mesma chave.
+16/07/2020 13:35:34: O índice estava fora dos limites da matriz.
+16/07/2020 13:35:37: O índice estava fora dos limites da matriz.
+16/07/2020 13:35:38: O índice estava fora dos limites da matriz.
+16/07/2020 13:35:38: O índice estava fora dos limites da matriz.
+16/07/2020 13:35:39: O índice estava fora dos limites da matriz.
+16/07/2020 13:35:39: O índice estava fora dos limites da matriz.
+16/07/2020 13:35:39: O índice estava fora dos limites da matriz.
+16/07/2020 13:35:40: O índice estava fora dos limites da matriz.
+16/07/2020 13:35:40: O índice estava fora dos limites da matriz.
+16/07/2020 13:35:41: O índice estava fora dos limites da matriz.
+16/07/2020 13:36:07: A função PrepareEnvironmentForWindowsForms() executou com sucesso!
+16/07/2020 13:36:23: Programa iniciou --------------------------------------------------
+16/07/2020 13:36:23: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 13:43:08: Programa iniciou --------------------------------------------------
+16/07/2020 13:43:09: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 13:50:09: Programa iniciou --------------------------------------------------
+16/07/2020 13:50:10: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 13:51:24: Programa iniciou --------------------------------------------------
+16/07/2020 13:51:25: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 13:52:10: O índice estava fora dos limites da matriz.
+16/07/2020 13:52:14: O índice estava fora dos limites da matriz.
+16/07/2020 13:52:15: O índice estava fora dos limites da matriz.
+16/07/2020 13:52:15: O índice estava fora dos limites da matriz.
+16/07/2020 13:52:16: Já foi adicionado um item com a mesma chave.
+16/07/2020 13:52:16: Já foi adicionado um item com a mesma chave.
+16/07/2020 13:52:16: O índice estava fora dos limites da matriz.
+16/07/2020 13:52:16: O índice estava fora dos limites da matriz.
+16/07/2020 13:52:17: O índice estava fora dos limites da matriz.
+16/07/2020 13:52:17: O índice estava fora dos limites da matriz.
+16/07/2020 13:52:17: O índice estava fora dos limites da matriz.
+16/07/2020 13:52:17: O índice estava fora dos limites da matriz.
+16/07/2020 13:52:18: O índice estava fora dos limites da matriz.
+16/07/2020 13:52:18: O índice estava fora dos limites da matriz.
+16/07/2020 13:52:18: O índice estava fora dos limites da matriz.
+16/07/2020 13:52:18: O índice estava fora dos limites da matriz.
+16/07/2020 13:52:34: Programa iniciou --------------------------------------------------
+16/07/2020 13:52:34: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 13:59:25: Programa iniciou --------------------------------------------------
+16/07/2020 13:59:25: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 14:03:28: Programa iniciou --------------------------------------------------
+16/07/2020 14:03:29: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 14:11:28: Programa iniciou --------------------------------------------------
+16/07/2020 14:11:28: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 14:16:27: Programa iniciou --------------------------------------------------
+16/07/2020 14:16:28: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 14:22:47: Programa iniciou --------------------------------------------------
+16/07/2020 14:22:48: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 14:23:35: Programa iniciou --------------------------------------------------
+16/07/2020 14:23:35: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 14:53:19: Programa iniciou --------------------------------------------------
+16/07/2020 14:53:19: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 15:02:31: Programa iniciou --------------------------------------------------
+16/07/2020 15:02:32: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 15:06:01: Já foi adicionado um item com a mesma chave.
+16/07/2020 15:06:13: Já foi adicionado um item com a mesma chave.
+16/07/2020 15:06:44: Programa iniciou --------------------------------------------------
+16/07/2020 15:06:44: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 15:07:55: Já foi adicionado um item com a mesma chave.
+16/07/2020 15:07:59: Já foi adicionado um item com a mesma chave.
+16/07/2020 15:08:05: Programa iniciou --------------------------------------------------
+16/07/2020 15:08:06: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 15:09:58: Programa iniciou --------------------------------------------------
+16/07/2020 15:09:59: A função SearchForRecordsInDataBase("") executou com sucesso!
+16/07/2020 15:19:06: Programa iniciou --------------------------------------------------
+16/07/2020 15:19:06: A função SearchForRecordsInDataBase("") executou com sucesso!

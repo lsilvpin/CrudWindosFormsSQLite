@@ -4,6 +4,8 @@ using LearningWindowsForms.view;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Windows.Forms;
 
@@ -15,10 +17,12 @@ namespace LearningWindowsForms.services
   class Utility
   {
     // Gaveta para guardar coisas importantes
-    public static List<Character> Characters { get; set; }
+    public static List<Character> ListBoxItems { get; set; } // Items da list box
     public static Character SelectedItem { get; set; } // Guarda item selecionado na ListBox
     public static bool CreateOrEditMode { get; set; } // Armazena tipo da janela Edit
     public static bool DeleteOrReadMode { get; set; } // Tipo da janela Details
+    public static List<bool> OrderingKeys { get; set; } // Chaves de ordenação
+    public static bool GenericKey { get; set; } // Guarda temporariamente resultados úteis
 
     // Informações necessárias na definição dos métodos abaixo
     private static string _LocalRepository = @"C:\Users\lsilvpin\source\repos"; // MapPath()
@@ -75,7 +79,7 @@ namespace LearningWindowsForms.services
     {
       try
       {
-        Characters = Seed.Read(search, id);
+        ListBoxItems = Seed.Read(search, id);
         return true;
       }
       catch (Exception ex)
@@ -84,6 +88,7 @@ namespace LearningWindowsForms.services
         return false;
       }
     }
+
     /// <summary>
     /// Chama a camada de repositório para atualizar o banco
     /// </summary>
@@ -98,9 +103,9 @@ namespace LearningWindowsForms.services
       try
       {
         Seed.Update(oldCharacter.Id, newCharacter);
-        MessageBox.Show(String.Concat("O registro (",oldCharacter.Name,", ",
-          oldCharacter.Race,", ",oldCharacter.Role,") foi atualizado para (",
-          newCharacter.Name,", ",newCharacter.Race,", ",newCharacter.Role,
+        MessageBox.Show(String.Concat("O registro (", oldCharacter.Name, ", ",
+          oldCharacter.Race, ", ", oldCharacter.Role, ") foi atualizado para (",
+          newCharacter.Name, ", ", newCharacter.Race, ", ", newCharacter.Role,
           ") com sucesso! =]"));
         return true;
       }
@@ -191,6 +196,188 @@ namespace LearningWindowsForms.services
         return false;
       }
     }
+    /// <summary>
+    /// Encontra a palavra da lista, que vem primeiro na ordem lexicográfica
+    /// </summary>
+    /// <param name="inputList">Lista desordenada</param>
+    /// <returns>Palavra mínima na ordem</returns>
+    public static Dictionary<bool, string> FindMinimalWordInLexicOrder(List<String> inputList)
+    {
+      try
+      {
+        // Reservamos um lugar na memória para receber a menor das palavras
+        string word = String.Empty;
+        // Pegamos a primeira palavra na lista dada
+        word = inputList[0];
+        // Iniciamos o processo de procura pela menor das palavras
+        while (true)
+        {
+          // Comparamos a palavra com todas da lista dada
+          for (int i = 0; i < inputList.Count; i++)
+          {
+            if (!IsFirstStringLessThanSecond(word, inputList[i]))
+            {
+              word = inputList[i];
+              break;
+            }
+            if (i == inputList.Count-1)
+            {
+              // Prepara a saída
+              Dictionary<bool, string> output = new Dictionary<bool, string>();
+              output.Add(true, word);
+              // Salva o resultado em Generica Key
+              Utility.GenericKey = true;
+              // E retorna a saída
+              return output;
+            }
+          }
+        }
+      }
+      catch (Exception ex)
+      {
+        Log(ex.Message);
+        MessageBox.Show(ex.Message);
+        // Prepara a saída
+        Dictionary<bool, string> output = new Dictionary<bool, string>();
+        output.Add(false, String.Empty);
+        // Salva o resultado em Generica Key
+        Utility.GenericKey = false;
+        // E retorna a saída
+        return output;
+      }
+    }
+    /// <summary>
+    /// Reordena uma lista seguindo a ordem lexicográfica crescente
+    /// </summary>
+    /// <param name="inputList">Lista desordenada</param>
+    /// <returns>Lista ordenada</returns>
+    public static Dictionary<bool, List<string>> OrderAscending(List<string> inputList)
+    {
+      try
+      {
+        // Instanciamos a lista que receberá a ordem correta
+        List<string> outputList = new List<string>();
+        // Iniciamos o processo de reordenação
+        while (inputList.Count > 0)
+        {
+          // Encontramos a menor das palavras na lista de entrada, na ordem lexicográfica
+          string min = FindMinimalWordInLexicOrder(inputList).Values.FirstOrDefault();
+          // Retiramos ela da lista de entrada
+          inputList.Remove(min);
+          // Inserimos ela na lista de saída, como sendo a primeira
+          outputList.Add(min);
+        }
+        // Retornamos a lista com a ordem correta
+        Dictionary<bool, List<string>> output = new Dictionary<bool, List<string>>();
+        output.Add(true, outputList);
+        // Salva o resultado em Generica Key
+        Utility.GenericKey = true;
+        // E retorna a saída
+        return output;
+      }
+      catch (Exception ex)
+      {
+        Log(ex.Message);
+        MessageBox.Show(ex.Message);
+        // Retornamos a lista com a ordem correta
+        Dictionary<bool, List<string>> output = new Dictionary<bool, List<string>>();
+        output.Add(false, new List<string>());
+        // Salva o resultado em Generica Key
+        Utility.GenericKey = false;
+        // E retorna a saída
+        return output;
+      }
+    }
+    /// <summary>
+    /// Método que ordena lista pela coluna escolhida
+    /// </summary>
+    /// <param name="column"></param>
+    /// <returns></returns>
+    public static Dictionary<bool, List<Character>> OrderAscendingByColumn(string column, List<Character> inputList)
+    {
+      try
+      {
+        // Instanciamos a lista que receberá a ordem de saída
+        List<Character> outputList = new List<Character>();
+        // Montamos a lista de saída ordenando pela coluna pedida
+        if (column == "Name")
+        {
+          // Coletamos as palavras a serem ordenadas
+          List<string> words = new List<string>();
+          words = inputList.Select(character => character.Name).ToList();
+          // Eliminamos as palavras repetidas
+          words = words.ToHashSet().ToList();
+          // Ordenamos a lista de palavras
+          words = OrderAscending(words).Values.FirstOrDefault();
+          // Montamos a lista de saída na ordem requerida
+          foreach (string word in words)
+          {
+            outputList.AddRange(inputList.Where(character => character.Name == word));
+          }
+          // Retornamos a lista de personagens ordenada
+          Dictionary<bool, List<Character>> output = new Dictionary<bool, List<Character>>();
+          output.Add(true, outputList);
+          // Salva o resultado em Generica Key
+          Utility.GenericKey = true;
+          // E retorna a saída
+          return output;
+        }
+        else if (column == "Race")
+        {
+          // Coletamos as palavras a serem ordenadas
+          List<string> words = inputList.Select(character => character.Race).ToList();
+          // Eliminamos as palavras repetidas
+          words = words.ToHashSet().ToList();
+          // Ordenamos a lista de palavras
+          words = OrderAscending(words).Values.FirstOrDefault();
+          // Montamos a lista de saída na ordem requerida
+          foreach (string word in words)
+          {
+            outputList.AddRange(inputList.Where(character => character.Name == word));
+          }
+          // Retornamos a lista de personagens ordenada
+          Dictionary<bool, List<Character>> output = new Dictionary<bool, List<Character>>();
+          output.Add(true, outputList);
+          // Salva o resultado em Generica Key
+          Utility.GenericKey = true;
+          // E retorna a saída
+          return output;
+        }
+        else
+        {
+          // Coletamos as palavras a serem ordenadas
+          List<string> words = inputList.Select(character => character.Role).ToList();
+          // Eliminamos as palavras repetidas
+          words = words.ToHashSet().ToList();
+          // Ordenamos a lista de palavras
+          words = OrderAscending(words).Values.FirstOrDefault();
+          // Montamos a lista de saída na ordem requerida
+          foreach (string word in words)
+          {
+            outputList.AddRange(inputList.Where(character => character.Name == word));
+          }
+          // Retornamos a lista de personagens ordenada
+          Dictionary<bool, List<Character>> output = new Dictionary<bool, List<Character>>();
+          output.Add(true, outputList);
+          // Salva o resultado em Generica Key
+          Utility.GenericKey = true;
+          // E retorna a saída
+          return output;
+        }
+      }
+      catch (Exception ex)
+      {
+        Log(ex.Message);
+        MessageBox.Show(ex.Message);
+        // Retornamos a lista de personagens ordenada
+        Dictionary<bool, List<Character>> output = new Dictionary<bool, List<Character>>();
+        output.Add(false, new List<Character>());
+        // Salva o resultado em Generica Key
+        Utility.GenericKey = false;
+        // E retorna a saída
+        return output;
+      }
+    }
     #endregion
 
     // Caixa de ferramentas úteis em toda a aplicação
@@ -259,6 +446,121 @@ namespace LearningWindowsForms.services
       else
       {
         Log(String.Concat("A função ", serviceName, " finalizou com erro(s)!"));
+      }
+    }
+    #endregion
+
+    // Definindo a ordem Lexicográfica
+    #region Ordem Lexicográfica
+    // Ordem entre letras, de forma crescente
+    public static Dictionary<int, string> OrderedAlphabet()
+    {
+      try
+      {
+        // Instancio um dicionário
+        Dictionary<int, string> orderedAlphabet = new Dictionary<int, string>();
+        // Crio manualmente a função de ordenar as letras
+        orderedAlphabet.Add(0, "a");
+        orderedAlphabet.Add(1, "b");
+        orderedAlphabet.Add(2, "c");
+        orderedAlphabet.Add(3, "d");
+        orderedAlphabet.Add(4, "e");
+        orderedAlphabet.Add(5, "f");
+        orderedAlphabet.Add(6, "g");
+        orderedAlphabet.Add(7, "h");
+        orderedAlphabet.Add(8, "i");
+        orderedAlphabet.Add(9, "j");
+        orderedAlphabet.Add(10, "k");
+        orderedAlphabet.Add(11, "l");
+        orderedAlphabet.Add(12, "m");
+        orderedAlphabet.Add(13, "n");
+        orderedAlphabet.Add(14, "o");
+        orderedAlphabet.Add(15, "p");
+        orderedAlphabet.Add(16, "q");
+        orderedAlphabet.Add(17, "r");
+        orderedAlphabet.Add(18, "s");
+        orderedAlphabet.Add(19, "t");
+        orderedAlphabet.Add(20, "u");
+        orderedAlphabet.Add(21, "v");
+        orderedAlphabet.Add(22, "w");
+        orderedAlphabet.Add(23, "x");
+        orderedAlphabet.Add(24, "y");
+        orderedAlphabet.Add(25, "z");
+        return orderedAlphabet;
+      }
+      catch (Exception ex)
+      {
+        Log(ex.Message);
+        MessageBox.Show(ex.Message);
+        throw new Exception(ex.Message);
+      }
+    }
+    // Define a relação de ordem entre caracteres <=
+    public static bool IsFirstCharLessThanSecond(char first, char second)
+    {
+      try
+      {
+        // Pego a chave numérica dos caracteres de entrada
+        // Tal inversão ocorre tranquilamente pois a função é bijetora
+        int keyOfFirst = OrderedAlphabet().Where(pair => pair.Value == first.ToString().ToLower()).FirstOrDefault().Key;
+        int keyOfSecond = OrderedAlphabet().Where(pair => pair.Value == second.ToString().ToLower()).FirstOrDefault().Key;
+        // Comparo-as pela ordem usual dos números naturais
+        return keyOfFirst <= keyOfSecond;
+      }
+      catch (Exception ex)
+      {
+        Log(ex.Message);
+        MessageBox.Show(ex.Message);
+        throw new Exception(ex.Message);
+      }
+    }
+    // Define a relação de Igual nesta ordem
+    public static bool IsCharIqualInThisOrder(char first, char second)
+    {
+      try
+      {
+        return IsFirstCharLessThanSecond(first, second) &&
+        IsFirstCharLessThanSecond(second, first);
+      }
+      catch (Exception ex)
+      {
+        Log(ex.Message);
+        MessageBox.Show(ex.Message);
+        throw new Exception(ex.Message);
+      }
+    }
+    // Generalizando para cadeias de caracteres
+    public static bool IsFirstStringLessThanSecond(string first, string second)
+    {
+      try
+      {
+        // Coletamos o tamanho da menor das strings
+        int min = Math.Min(first.Length, second.Length);
+        // Transformamos as strings em vetores de caracteres, cortando em min
+        char[] firstStringList = first.Substring(0, min).ToCharArray();
+        char[] secondStringList = second.Substring(0, min).ToCharArray();
+        // Agora zipamos as duas listas, obtendo uma lista de pares ordenados
+        List<List<char>> zipedLists = new List<List<char>>();
+        for (int i = 0; i < min; i++)
+        {
+          zipedLists.Add(new List<char> { firstStringList[i], secondStringList[i] });
+        }
+        // Vamos desempatando uma a uma
+        foreach (List<char> pair in zipedLists)
+        {
+          if (!IsCharIqualInThisOrder(pair[0], pair[1]))
+          {
+            return IsFirstCharLessThanSecond(pair[0], pair[1]);
+          }
+        }
+        // Caso tenham empatado em todas as letras
+        return true; // Pois é ordem parcial
+      }
+      catch (Exception ex)
+      {
+        Log(ex.Message);
+        MessageBox.Show(ex.Message);
+        throw new Exception(ex.Message);
       }
     }
     #endregion

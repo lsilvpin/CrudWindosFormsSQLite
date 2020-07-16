@@ -38,7 +38,12 @@
       this.inputSearch = new System.Windows.Forms.ToolStripTextBox();
       this.IconSearch = new System.Windows.Forms.ToolStripButton();
       this.ListSearch = new System.Windows.Forms.ListBox();
-      this.ListBoxDescription = new System.Windows.Forms.Label();
+      this.ColumTitleName = new System.Windows.Forms.Label();
+      this.ColumnTitleRace = new System.Windows.Forms.Label();
+      this.ColumnTitleRole = new System.Windows.Forms.Label();
+      this.BtnOrderByName = new System.Windows.Forms.Button();
+      this.BtnOrderByRace = new System.Windows.Forms.Button();
+      this.BtnOrderByRole = new System.Windows.Forms.Button();
       this.toolStrip1.SuspendLayout();
       this.SuspendLayout();
       // 
@@ -128,21 +133,75 @@
       this.ListSearch.Click += new System.EventHandler(this.ItemSelected);
       this.ListSearch.DoubleClick += new System.EventHandler(this.EditButtonClicked);
       // 
-      // ListBoxDescription
+      // ColumTitleName
       // 
-      this.ListBoxDescription.AutoSize = true;
-      this.ListBoxDescription.Location = new System.Drawing.Point(84, 60);
-      this.ListBoxDescription.Name = "ListBoxDescription";
-      this.ListBoxDescription.Size = new System.Drawing.Size(123, 17);
-      this.ListBoxDescription.TabIndex = 2;
-      this.ListBoxDescription.Text = "Name, Race, Role";
+      this.ColumTitleName.AutoSize = true;
+      this.ColumTitleName.Location = new System.Drawing.Point(87, 57);
+      this.ColumTitleName.Name = "ColumTitleName";
+      this.ColumTitleName.Size = new System.Drawing.Size(45, 17);
+      this.ColumTitleName.TabIndex = 2;
+      this.ColumTitleName.Text = "Name";
+      // 
+      // ColumnTitleRace
+      // 
+      this.ColumnTitleRace.AutoSize = true;
+      this.ColumnTitleRace.Location = new System.Drawing.Point(290, 57);
+      this.ColumnTitleRace.Name = "ColumnTitleRace";
+      this.ColumnTitleRace.Size = new System.Drawing.Size(41, 17);
+      this.ColumnTitleRace.TabIndex = 3;
+      this.ColumnTitleRace.Text = "Race";
+      // 
+      // ColumnTitleRole
+      // 
+      this.ColumnTitleRole.AutoSize = true;
+      this.ColumnTitleRole.Location = new System.Drawing.Point(488, 57);
+      this.ColumnTitleRole.Name = "ColumnTitleRole";
+      this.ColumnTitleRole.Size = new System.Drawing.Size(37, 17);
+      this.ColumnTitleRole.TabIndex = 4;
+      this.ColumnTitleRole.Text = "Role";
+      // 
+      // BtnOrderByName
+      // 
+      this.BtnOrderByName.Cursor = System.Windows.Forms.Cursors.Hand;
+      this.BtnOrderByName.Location = new System.Drawing.Point(138, 54);
+      this.BtnOrderByName.Name = "BtnOrderByName";
+      this.BtnOrderByName.Size = new System.Drawing.Size(99, 23);
+      this.BtnOrderByName.TabIndex = 5;
+      this.BtnOrderByName.Text = "Ordenar";
+      this.BtnOrderByName.UseVisualStyleBackColor = true;
+      this.BtnOrderByName.Click += new System.EventHandler(this.OrderByName);
+      // 
+      // BtnOrderByRace
+      // 
+      this.BtnOrderByRace.Cursor = System.Windows.Forms.Cursors.Hand;
+      this.BtnOrderByRace.Location = new System.Drawing.Point(337, 54);
+      this.BtnOrderByRace.Name = "BtnOrderByRace";
+      this.BtnOrderByRace.Size = new System.Drawing.Size(99, 23);
+      this.BtnOrderByRace.TabIndex = 6;
+      this.BtnOrderByRace.Text = "Ordenar";
+      this.BtnOrderByRace.UseVisualStyleBackColor = true;
+      // 
+      // BtnOrderByRole
+      // 
+      this.BtnOrderByRole.Cursor = System.Windows.Forms.Cursors.Hand;
+      this.BtnOrderByRole.Location = new System.Drawing.Point(531, 54);
+      this.BtnOrderByRole.Name = "BtnOrderByRole";
+      this.BtnOrderByRole.Size = new System.Drawing.Size(99, 23);
+      this.BtnOrderByRole.TabIndex = 7;
+      this.BtnOrderByRole.Text = "Ordenar";
+      this.BtnOrderByRole.UseVisualStyleBackColor = true;
       // 
       // Index
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(800, 450);
-      this.Controls.Add(this.ListBoxDescription);
+      this.Controls.Add(this.BtnOrderByRole);
+      this.Controls.Add(this.BtnOrderByRace);
+      this.Controls.Add(this.BtnOrderByName);
+      this.Controls.Add(this.ColumnTitleRole);
+      this.Controls.Add(this.ColumnTitleRace);
+      this.Controls.Add(this.ColumTitleName);
       this.Controls.Add(this.ListSearch);
       this.Controls.Add(this.toolStrip1);
       this.Name = "Index";
@@ -166,6 +225,11 @@
     private System.Windows.Forms.ToolStripTextBox inputSearch;
     private System.Windows.Forms.ToolStripButton IconSearch;
     private System.Windows.Forms.ListBox ListSearch;
-    private System.Windows.Forms.Label ListBoxDescription;
+    private System.Windows.Forms.Label ColumTitleName;
+    private System.Windows.Forms.Label ColumnTitleRace;
+    private System.Windows.Forms.Label ColumnTitleRole;
+    private System.Windows.Forms.Button BtnOrderByName;
+    private System.Windows.Forms.Button BtnOrderByRace;
+    private System.Windows.Forms.Button BtnOrderByRole;
   }
 }
