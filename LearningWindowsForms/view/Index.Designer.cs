@@ -131,7 +131,7 @@
       this.ListSearch.Size = new System.Drawing.Size(620, 292);
       this.ListSearch.TabIndex = 1;
       this.ListSearch.Click += new System.EventHandler(this.ItemSelected);
-      this.ListSearch.DoubleClick += new System.EventHandler(this.EditButtonClicked);
+      this.ListSearch.DoubleClick += new System.EventHandler(this.DeleteButtonClicked);
       // 
       // ColumTitleName
       // 
